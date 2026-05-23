@@ -1,0 +1,69 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Trane Technologies
+providerId: trane-technologies
+created: '2026-05-23'
+modified: '2026-05-23'
+reconciled: false
+tags:
+  - HVAC
+  - IoT
+  - Telematics
+  - Building Automation
+  - Rate Limiting
+description: >-
+  Trane Technologies does not publish public per-second or per-minute
+  rate limits for the Trane Connect, Tracer SC+, Symbio, or Thermo King
+  TracKing surfaces. Limits are configured per customer credential and
+  dimensioned by tracked-asset or per-building license rather than raw
+  request rate, and are coordinated through the partner-gated Trane
+  developer portal and Thermo King integrations support.
+notes: >-
+  No public rate-limit documentation found on Trane Connect, Tracer SC+,
+  Symbio, or TracKing developer surfaces. Treat as customer- and
+  partner-contract-defined; throttling responses (HTTP 429) are the
+  expected backpressure signal where REST surfaces exist.
+sources:
+  - https://developer.devops.chvac.trane.com/
+  - https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services/systems-integration.html
+  - https://www.thermoking.com/na/en/connectedsuite-telematics/tracking-telematics.html
+responseCodes:
+  throttled: 429
+limits:
+  - name: Trane Connect (per-tenant)
+    scope: tenant
+    metric: varies
+    limit: see Trane Connect onboarding
+  - name: Tracer SC+ / Symbio (per-site)
+    scope: site
+    metric: varies
+    limit: see installer / integrator documentation
+  - name: Thermo King TracKing (per-customer)
+    scope: customer
+    metric: varies
+    limit: see TracKing API onboarding
+policies:
+  - name: Asset-scoped polling
+    description: >-
+      TracKing rewards periodic polling per-asset rather than burst
+      reads; align polling cadence to the documented telemetry
+      interval for the reefer unit family.
+  - name: Building-scoped polling
+    description: >-
+      Trane Connect / Tracer trend reads are best done in scheduled
+      batches at the trend-log cadence; avoid hammering high-frequency
+      trends from interactive clients.
+  - name: Backoff strategy
+    description: >-
+      Implement exponential backoff with jitter on 429 responses and
+      coordinate large back-fills with the Trane / Thermo King
+      integrations contact.
+  - name: Two-way command safety
+    description: >-
+      Two-way commands to TRUs and to HVAC equipment have stricter
+      throttling and require idempotency keys / safeguards to avoid
+      double-actuation on retried requests.
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com

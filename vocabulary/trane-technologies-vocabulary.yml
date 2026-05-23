@@ -1,0 +1,100 @@
+vocabulary: trane-technologies
+description: >-
+  Controlled vocabulary for Trane Technologies' commercial HVAC, building
+  automation, and Thermo King transport refrigeration surfaces — Trane
+  Connect, Tracer SC+, Symbio equipment controllers, and the
+  ConnectedSuite / TracKing telematics platforms.
+version: '1.0.0'
+concepts:
+  - term: Building
+    definition: >-
+      A facility monitored or controlled through Trane Connect / Tracer
+      SC+, with associated HVAC equipment, controllers, schedules, and
+      energy meters.
+  - term: Space
+    definition: >-
+      A zone inside a building (floor, suite, room) with its own HVAC
+      setpoint, occupancy state, and environmental readings.
+  - term: EquipmentUnit
+    definition: >-
+      A chiller, rooftop unit, air handler, VRF, or other HVAC asset
+      monitored via Tracer SC+ or controlled by a Symbio equipment
+      controller.
+  - term: Controller
+    definition: >-
+      A Tracer SC+ or Symbio device that aggregates BACnet / Modbus /
+      LonTalk objects for a building or equipment unit.
+  - term: Setpoint
+    definition: >-
+      A desired target value (temperature, humidity, pressure) commanded
+      to an equipment unit or building zone.
+  - term: Schedule
+    definition: >-
+      A time-based program controlling equipment occupancy, setpoints,
+      or system state.
+  - term: Alarm
+    definition: >-
+      A fault, warning, or out-of-band condition raised by equipment,
+      a controller, or a TracKing-connected reefer unit.
+  - term: TrendLog
+    definition: >-
+      A historical time series of point values (e.g. supply-air
+      temperature) used for trending, diagnostics, and analytics.
+  - term: Asset
+    definition: >-
+      A physical tracked unit in the Thermo King TracKing platform —
+      typically a trailer, truck, container, or rail car equipped with
+      a transport refrigeration unit (TRU).
+  - term: TRU
+    definition: >-
+      A Transport Refrigeration Unit — the diesel, hybrid, or electric
+      refrigeration device attached to a trailer, truck, container, or
+      rail car whose state is reported through TracKing.
+  - term: Compartment
+    definition: >-
+      A temperature-controlled zone within a multi-temp TRU; each
+      compartment carries its own setpoint and return / supply air
+      readings.
+  - term: Trip
+    definition: >-
+      A bounded journey segment of a refrigerated asset with start,
+      end, route, and cold-chain compliance record.
+  - term: Geofence
+    definition: >-
+      A geographic boundary used to generate entry / exit and dwell
+      events for tracked assets.
+  - term: Command
+    definition: >-
+      A two-way instruction issued to a TRU or HVAC equipment unit
+      (start, stop, change setpoint, lock door) through TracKing or
+      Trane Connect.
+  - term: Thermostat
+    definition: >-
+      A residential connected thermostat in the Trane ComfortLink II /
+      LINK / XL / XR product families, controllable from Trane's
+      consumer apps.
+  - term: Tenant
+    definition: >-
+      A customer organisation (fleet operator, building owner, REIT,
+      facilities firm) whose assets and equipment are partitioned
+      under a single TracKing / Trane Connect account.
+mappings:
+  - term: Building
+    schema_org: schema:Place
+  - term: Space
+    schema_org: schema:Room
+  - term: EquipmentUnit
+    schema_org: schema:Product
+  - term: Asset
+    schema_org: schema:Vehicle
+  - term: Trip
+    schema_org: schema:Trip
+  - term: Geofence
+    schema_org: schema:GeoShape
+  - term: Alarm
+    schema_org: schema:AlertStatus
+  - term: Thermostat
+    schema_org: schema:Product
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com

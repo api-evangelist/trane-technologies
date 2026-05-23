@@ -1,0 +1,108 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Trane Technologies
+providerId: trane-technologies
+created: '2026-05-23'
+modified: '2026-05-23'
+reconciled: false
+tags:
+  - FinOps
+  - FOCUS
+  - HVAC
+  - IoT
+  - Telematics
+  - Building Automation
+description: >-
+  FOCUS-aligned FinOps view of Trane Technologies' digital surface:
+  per-building Trane Connect subscriptions, per-site Tracer SC+ /
+  Symbio controls licensing, and per-asset Thermo King TracKing
+  telematics — bundled with hardware and dealer-network commercial
+  agreements rather than billed as standalone API SKUs.
+notes: >-
+  Trane Technologies does not bill API access as a separate SKU.
+  FinOps mapping is provisional; reconcile against the customer's
+  Trane Connect / Tracer / TracKing commercial agreement and the
+  Trane / Thermo King dealer or partner contract.
+sources:
+  - https://www.tranetechnologies.com/
+  - https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services.html
+  - https://www.thermoking.com/na/en/connectedsuite-telematics/tracking-telematics.html
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Trane Technologies plc
+serviceCategory: HVAC / IoT Platform
+billingModel:
+  pricingCategory: Subscription + Per-Asset + Per-Site
+  billingFrequency: Annual
+  billingCurrency: USD
+  chargeCategories:
+    - Purchase
+    - Usage
+    - Adjustment
+focusColumns:
+  ServiceName: Trane Digital Platforms
+  ServiceCategory: HVAC / IoT Platform
+  ProviderName: Trane Technologies
+  PublisherName: Trane Technologies plc
+  InvoiceIssuerName: Trane Technologies plc
+  BillingCurrency: USD
+meters:
+  - name: trane_connect_buildings
+    unit: building-year
+    aggregation: max
+    dimensions:
+      - region
+      - tenant
+  - name: tracer_sites
+    unit: site-year
+    aggregation: max
+    dimensions:
+      - region
+  - name: tracking_assets
+    unit: asset-month
+    aggregation: max
+    dimensions:
+      - asset_type
+      - region
+  - name: api_requests
+    unit: request
+    aggregation: sum
+    dimensions:
+      - api
+      - tenant
+  - name: telemetry_volume
+    unit: GB
+    aggregation: sum
+    dimensions:
+      - api
+principles:
+  - name: Visibility
+    description: >-
+      Visibility comes from the Trane Connect and TracKing dashboards
+      (building count, asset count, alarms, telemetry volume); there
+      is no separate API-billing dashboard published by Trane.
+  - name: Allocation
+    description: >-
+      Allocate by building (Trane Connect), site (Tracer / Symbio),
+      and asset (TracKing); multi-fleet or multi-portfolio customers
+      should partition by tenant per business unit.
+  - name: Optimization
+    description: >-
+      Decommission inactive assets and consolidate idle buildings to
+      reduce per-asset / per-building burn; tune trend, alarm, and
+      telemetry cadence to avoid redundant ingestion through partner
+      integrations.
+  - name: Accountability
+    description: >-
+      Facilities-management owns Trane Connect / Tracer; fleet
+      operations owns TracKing. Quarterly asset, building, and renewal
+      reviews are typical with the Trane dealer network and Thermo
+      King support.
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com

@@ -1,0 +1,130 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Trane Technologies
+providerId: trane-technologies
+created: '2026-05-23'
+modified: '2026-05-23'
+reconciled: false
+tags:
+  - HVAC
+  - Cold Chain
+  - Telematics
+  - Building Automation
+  - IoT
+  - Fortune 500
+description: >-
+  Trane Technologies is a NYSE-listed (TT) global HVAC, building-automation,
+  and transport-refrigeration company. Across Trane Connect, Tracer SC+,
+  Symbio controllers, and Thermo King TracKing / ConnectedSuite, API access
+  is partner-gated and bundled with the underlying hardware, controls
+  license, or telematics subscription rather than sold as a standalone
+  API SKU. There is no public, self-serve API pricing page.
+notes: >-
+  No public API pricing is published by Trane Technologies. API access
+  for Trane Connect, Tracer, Symbio, and TracKing is included with the
+  associated equipment purchase or subscription and quoted through the
+  Trane dealer network or Thermo King support; reconcile against the
+  customer's specific commercial agreement.
+sources:
+  - https://www.tranetechnologies.com/
+  - https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services.html
+  - https://developer.devops.chvac.trane.com/
+  - https://www.thermoking.com/na/en/connectedsuite-telematics/tracking-telematics.html
+plans:
+  - id: trane-connect-commercial
+    name: Trane Connect (Commercial Buildings)
+    type: subscription
+    description: >-
+      Trane Connect cloud building portal subscription bundled with
+      controls, equipment, and intelligent-services agreements;
+      programmatic / partner API access through the Trane developer
+      portal is gated to enrolled integrators.
+    entries:
+      - label: Per-building subscription
+        name: trane_connect_building
+        type: subscription
+        metric: building
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: contact dealer
+        userMultiplied: false
+    elements:
+      - name: Trane Connect Portal
+      - name: Remote Monitoring and Schedules
+      - name: Alarm and Trend Streaming
+  - id: tracer-controls-license
+    name: Tracer SC+ / Symbio Controls
+    type: enterprise
+    description: >-
+      Commercial building-automation controllers (Tracer SC+ and
+      Symbio) sold and installed via the Trane dealer / contractor
+      network; protocol and API integration toolkits are bundled with
+      the installation contract.
+    entries:
+      - label: Controls license
+        name: controls_license
+        type: subscription
+        metric: site
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: contact dealer
+        userMultiplied: false
+    elements:
+      - name: Tracer SC+ Controller
+      - name: Symbio Equipment Controller
+      - name: BACnet / Modbus / LonTalk Integration Toolkit
+  - id: thermo-king-tracking
+    name: Thermo King TracKing / ConnectedSuite (TRU Telematics)
+    type: subscription
+    description: >-
+      Per-asset telematics subscription for transport refrigeration
+      units; API / web-service access for third-party integrators
+      (TMS, fleet platforms) is granted by Thermo King support
+      against the customer's TracKing subscription.
+    entries:
+      - label: Per-asset telematics
+        name: tracking_asset
+        type: subscription
+        metric: asset
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: contact sales
+        userMultiplied: false
+    elements:
+      - name: TracKing Telematics
+      - name: TracKing Pro (Energy)
+      - name: Smart Trailer Telematics
+      - name: Remote Operating Center
+  - id: trane-residential-connected
+    name: Trane Residential Connected Thermostats
+    type: consumer
+    description: >-
+      Connected residential thermostats (ComfortLink II XL1050 / XL850,
+      LINK UX360, XL824, XR724); included with the equipment purchase.
+      No public developer API for these devices today; third-party
+      access via platforms like Seam is inquiry-only.
+    entries:
+      - label: Equipment-bundled
+        name: residential_connected
+        type: oneTime
+        metric: device
+        limit: -1
+        timeFrame: lifetime
+        geo: global
+        unit: 1
+        price: included with equipment
+        userMultiplied: false
+    elements:
+      - name: ComfortLink II
+      - name: LINK UX360
+      - name: XL824 / XR724
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com

@@ -1,0 +1,238 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "trane": "https://tranetechnologies.com/vocab#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+
+    "Building": {
+      "@id": "trane:Building",
+      "@context": {
+        "buildingId": "schema:identifier",
+        "name": "schema:name",
+        "address": "schema:address",
+        "squareFeet": {
+          "@id": "schema:floorSize",
+          "@type": "xsd:decimal"
+        },
+        "tenant": {
+          "@id": "trane:tenant",
+          "@type": "@id"
+        }
+      }
+    },
+
+    "Space": {
+      "@id": "trane:Space",
+      "@context": {
+        "spaceId": "schema:identifier",
+        "building": {
+          "@id": "trane:building",
+          "@type": "@id"
+        },
+        "occupancy": {
+          "@id": "trane:occupancy",
+          "@type": "xsd:integer"
+        },
+        "co2Ppm": {
+          "@id": "trane:co2Ppm",
+          "@type": "xsd:decimal"
+        },
+        "zoneTempC": {
+          "@id": "trane:zoneTempC",
+          "@type": "xsd:decimal"
+        }
+      }
+    },
+
+    "EquipmentUnit": {
+      "@id": "trane:EquipmentUnit",
+      "@context": {
+        "equipmentId": "schema:identifier",
+        "equipmentType": "trane:equipmentType",
+        "status": "trane:equipmentStatus",
+        "controller": {
+          "@id": "trane:controller",
+          "@type": "@id"
+        }
+      }
+    },
+
+    "Controller": {
+      "@id": "trane:Controller",
+      "@context": {
+        "controllerId": "schema:identifier",
+        "model": "schema:model",
+        "firmware": "trane:firmwareVersion",
+        "protocol": "trane:protocol"
+      }
+    },
+
+    "Setpoint": {
+      "@id": "trane:Setpoint",
+      "@context": {
+        "setpointId": "schema:identifier",
+        "valueC": {
+          "@id": "trane:setpointValueC",
+          "@type": "xsd:decimal"
+        },
+        "mode": "trane:mode"
+      }
+    },
+
+    "Schedule": {
+      "@id": "trane:Schedule",
+      "@context": {
+        "scheduleId": "schema:identifier",
+        "name": "schema:name",
+        "startTime": {
+          "@id": "schema:startTime",
+          "@type": "xsd:dateTime"
+        },
+        "endTime": {
+          "@id": "schema:endTime",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "Alarm": {
+      "@id": "trane:Alarm",
+      "@context": {
+        "alarmId": "schema:identifier",
+        "code": "trane:alarmCode",
+        "severity": "trane:severity",
+        "raisedAt": {
+          "@id": "trane:raisedAt",
+          "@type": "xsd:dateTime"
+        },
+        "clearedAt": {
+          "@id": "trane:clearedAt",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "TrendLog": {
+      "@id": "trane:TrendLog",
+      "@context": {
+        "trendId": "schema:identifier",
+        "point": "trane:point",
+        "samples": {
+          "@id": "trane:samples",
+          "@container": "@list"
+        }
+      }
+    },
+
+    "Asset": {
+      "@id": "trane:Asset",
+      "@context": {
+        "assetId": "schema:identifier",
+        "vin": "trane:vin",
+        "make": "schema:brand",
+        "model": "schema:model",
+        "tru": {
+          "@id": "trane:tru",
+          "@type": "@id"
+        },
+        "location": {
+          "@id": "schema:geo",
+          "@type": "@id"
+        }
+      }
+    },
+
+    "TRU": {
+      "@id": "trane:TRU",
+      "@context": {
+        "truId": "schema:identifier",
+        "serialNumber": "schema:serialNumber",
+        "fuelType": "trane:fuelType",
+        "compartments": {
+          "@id": "trane:compartments",
+          "@container": "@list"
+        }
+      }
+    },
+
+    "Compartment": {
+      "@id": "trane:Compartment",
+      "@context": {
+        "compartmentId": "schema:identifier",
+        "setpointC": {
+          "@id": "trane:setpointC",
+          "@type": "xsd:decimal"
+        },
+        "returnAirC": {
+          "@id": "trane:returnAirC",
+          "@type": "xsd:decimal"
+        },
+        "supplyAirC": {
+          "@id": "trane:supplyAirC",
+          "@type": "xsd:decimal"
+        }
+      }
+    },
+
+    "Trip": {
+      "@id": "trane:Trip",
+      "@context": {
+        "tripId": "schema:identifier",
+        "startedAt": {
+          "@id": "schema:startTime",
+          "@type": "xsd:dateTime"
+        },
+        "endedAt": {
+          "@id": "schema:endTime",
+          "@type": "xsd:dateTime"
+        },
+        "route": "schema:itinerary"
+      }
+    },
+
+    "Geofence": {
+      "@id": "trane:Geofence",
+      "@context": {
+        "geofenceId": "schema:identifier",
+        "shape": "schema:geo",
+        "name": "schema:name"
+      }
+    },
+
+    "Command": {
+      "@id": "trane:Command",
+      "@context": {
+        "commandId": "schema:identifier",
+        "action": "trane:action",
+        "issuedAt": {
+          "@id": "trane:issuedAt",
+          "@type": "xsd:dateTime"
+        },
+        "status": "trane:commandStatus"
+      }
+    },
+
+    "Thermostat": {
+      "@id": "trane:Thermostat",
+      "@context": {
+        "thermostatId": "schema:identifier",
+        "model": "schema:model",
+        "setpointC": {
+          "@id": "trane:setpointC",
+          "@type": "xsd:decimal"
+        },
+        "mode": "trane:mode"
+      }
+    },
+
+    "Tenant": {
+      "@id": "trane:Tenant",
+      "@context": {
+        "tenantId": "schema:identifier",
+        "name": "schema:name"
+      }
+    }
+  }
+}

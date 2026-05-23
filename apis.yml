@@ -1,0 +1,271 @@
+aid: trane-technologies
+name: Trane Technologies
+description: >-
+  Trane Technologies plc (NYSE: TT) is an Ireland-domiciled global climate
+  innovator that designs, manufactures, sells, and services heating,
+  ventilation, air conditioning (HVAC), transport refrigeration, and
+  building-automation systems. The company operates through two reportable
+  segments — the Americas and EMEA / Asia Pacific — under the Trane,
+  Thermo King, and American Standard Heating & Air Conditioning brands.
+  Spun off from Ingersoll-Rand in 2020, Trane Technologies reported
+  approximately US$23.9B in 2025 revenue, ~45,000 employees, and
+  operations across 61 countries. Its digital surface centers on
+  Trane Connect (cloud building portal), Tracer SC+ / Symbio controllers
+  for commercial building automation, and the Thermo King TracKing /
+  ConnectedSuite telematics platform for transport refrigeration.
+type: Index
+position: Provider
+access: Partner
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - HVAC
+  - Cold Chain
+  - Telematics
+  - Building Automation
+  - IoT
+  - Refrigeration
+  - Transport Refrigeration
+  - BACnet
+  - Smart Buildings
+  - Fortune 500
+created: '2026-05-23'
+modified: '2026-05-23'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/trane-technologies/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: trane-technologies:trane-developer-portal
+    name: Trane Developer Portal
+    description: >-
+      Partner-facing developer portal hosted at
+      developer.devops.chvac.trane.com for Trane Commercial HVAC
+      ("CHVAC") cloud and controls APIs. The portal is gated and
+      surfaces API design, documentation, and onboarding for
+      integrators of Trane Connect, Tracer building-automation
+      services, and Symbio equipment controls. No public OpenAPI
+      catalog is published outside of the partner gate.
+    humanURL: https://developer.devops.chvac.trane.com/
+    tags:
+      - Developer Portal
+      - HVAC
+      - Building Automation
+      - Partner
+    properties:
+      - type: Portal
+        url: https://developer.devops.chvac.trane.com/
+      - type: SystemsIntegration
+        url: https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services/systems-integration.html
+  - aid: trane-technologies:trane-connect
+    name: Trane Connect
+    description: >-
+      Trane Connect is the secure, cloud-based customer portal that
+      lets building owners and service technicians remotely monitor
+      and manage Trane-connected building systems, automate routine
+      maintenance, view dashboards, and stream equipment telemetry.
+      Programmatic access is offered to partners through the Trane
+      developer portal rather than a self-serve public API.
+    humanURL: https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services.html
+    tags:
+      - Building Automation
+      - Cloud
+      - Connected Buildings
+      - HVAC
+    properties:
+      - type: Documentation
+        url: https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services.html
+      - type: Portal
+        url: https://www.tranetechnologies.com/en/index/news-and-events.html
+      - type: SignIn
+        url: https://www.tranetechnologies.com/
+  - aid: trane-technologies:tracer-sc-plus
+    name: Tracer SC+ Building Automation System
+    description: >-
+      Tracer SC+ is Trane's commercial building automation system
+      controller. It is built on open, industry-standard protocols —
+      BACnet/IP, BACnet MS/TP, BACnet Secure Connect, Modbus
+      (RTU and TCP/IP), and LonTalk — and exposes Trane APIs and
+      integration toolkits for third-party equipment, providing
+      schedule, alarm, trend, and override surfaces for system
+      integrators rather than a publicly documented REST API.
+    humanURL: https://www.trane.com/commercial/north-america/us/en/products-systems/smart-building-technology/building-controls-solutions/tracer-sc-plus.html
+    tags:
+      - Building Automation
+      - BACnet
+      - LonTalk
+      - Modbus
+      - HVAC
+    properties:
+      - type: Documentation
+        url: https://www.trane.com/commercial/north-america/us/en/products-systems/smart-building-technology/building-controls-solutions/tracer-sc-plus.html
+      - type: Integration
+        url: https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services/systems-integration.html
+      - type: ReleaseNotes
+        url: https://www.trane.com/content/dam/Trane/Commercial/global/building-management-&-automation-systems/BAS-SLB131-EN_07142021.pdf
+  - aid: trane-technologies:symbio-controllers
+    name: Trane Symbio Digital Equipment Controllers
+    description: >-
+      Symbio is Trane's portfolio of digital equipment controllers
+      (chillers, rooftop units, air handlers) providing remote
+      monitoring, diagnostics, and connectivity. Symbio communicates
+      over BACnet (MS/TP, IP, Zigbee), Modbus (client and server),
+      and Air-Fi wireless, and integrates upstream into Trane Connect
+      and Tracer SC+ rather than via a public REST API.
+    humanURL: https://www.trane.com/commercial/north-america/us/en/products-systems/smart-building-technology/symbio.html
+    tags:
+      - Equipment Controls
+      - BACnet
+      - Modbus
+      - IoT
+      - HVAC
+    properties:
+      - type: Documentation
+        url: https://www.trane.com/commercial/north-america/us/en/products-systems/smart-building-technology/symbio.html
+  - aid: trane-technologies:thermo-king-tracking
+    name: Thermo King TracKing Telematics
+    description: >-
+      Thermo King TracKing is the flagship telematics platform for
+      transport refrigeration units (TRUs) — trailers, trucks, vans,
+      and rail — exposing reefer setpoints, return / supply air
+      temperatures, alarms, door events, fuel levels, asset location,
+      and operating mode. A web-service integration surface is
+      provided to partners (Samsara, Motive, Mapon, Teletrac Navman,
+      Alvys, and others), with credentials granted by Thermo King
+      support rather than a self-serve developer signup.
+    humanURL: https://www.thermoking.com/na/en/connectedsuite-telematics/tracking-telematics.html
+    baseURL: https://tracking.thermoking.com/
+    tags:
+      - Telematics
+      - Cold Chain
+      - Refrigeration
+      - Transport Refrigeration
+      - Fleet
+      - IoT
+    properties:
+      - type: Documentation
+        url: https://www.thermoking.com/na/en/connectedsuite-telematics/tracking-telematics.html
+      - type: DataIntegration
+        url: https://europe.thermoking.com/applications/connected-solutions/tracking/data-integration
+      - type: SignIn
+        url: https://tracking.thermoking.com/
+      - type: UserManual
+        url: https://thermokingmichigan.com/wp-content/uploads/2015/06/product-tracking-manual.pdf
+      - type: PartnerIntegration
+        name: Samsara TracKing Integration
+        url: https://kb.samsara.com/hc/en-us/articles/9680069447949-Integrate-with-Thermo-King-TracKing
+      - type: PartnerIntegration
+        name: Motive AG Max Integration
+        url: https://helpcenter.gomotive.com/hc/en-us/articles/6189331073949-What-is-the-AG-Max-Thermo-King-Integration
+  - aid: trane-technologies:thermo-king-connectedsuite
+    name: Thermo King ConnectedSuite
+    description: >-
+      ConnectedSuite is Thermo King's umbrella of connected products
+      — TracKing telematics, TracKing Pro (energy usage), TracKing
+      Smart Trailer Telematics, and the Remote Operating Center —
+      that surface fleet operations data and remote controls for
+      refrigerated transport. Integrations are partner-mediated;
+      there is no public, self-serve API portal.
+    humanURL: https://www.thermoking.com/na/en/connectedsuite-telematics.html
+    tags:
+      - Telematics
+      - Cold Chain
+      - Refrigeration
+      - Fleet
+      - IoT
+    properties:
+      - type: Documentation
+        url: https://www.thermoking.com/na/en/connectedsuite-telematics.html
+  - aid: trane-technologies:trane-residential-connected
+    name: Trane Residential Connected Thermostats
+    description: >-
+      Residential connected-home line including ComfortLink II XL1050,
+      ComfortLink II XL850, LINK UX360, XL824, and XR724 smart
+      thermostats. Trane does not publish a public consumer developer
+      API for these devices; third-party access platforms such as Seam
+      list Trane support as inquiry-only at this time.
+    humanURL: https://www.trane.com/residential/en/products/thermostats/
+    tags:
+      - Residential
+      - Thermostats
+      - Smart Home
+      - HVAC
+    properties:
+      - type: Documentation
+        url: https://www.trane.com/residential/en/products/thermostats/
+      - type: ThirdParty
+        name: Seam Trane Inquiry
+        url: https://www.seam.co/manufacturers/trane
+  - aid: trane-technologies:brainbox-ai
+    name: BrainBox AI (Trane Technologies)
+    description: >-
+      BrainBox AI is the autonomous HVAC-optimization AI platform
+      operated under Trane Technologies, which opened the BrainBox AI
+      Lab in Montreal to accelerate AI-driven building optimization.
+      BrainBox AI exposes cloud-based optimization integrations to
+      enterprise customers; no public developer API portal is
+      currently published.
+    humanURL: https://brainboxai.com/
+    tags:
+      - AI
+      - Building Optimization
+      - HVAC
+      - Sustainability
+    properties:
+      - type: Website
+        url: https://brainboxai.com/
+common:
+  - type: Website
+    url: https://www.tranetechnologies.com/
+  - type: CommercialSite
+    name: Trane Commercial
+    url: https://www.trane.com/commercial/
+  - type: ResidentialSite
+    name: Trane Residential
+    url: https://www.trane.com/residential/
+  - type: BrandSite
+    name: Thermo King
+    url: https://www.thermoking.com/na/en.html
+  - type: BrandSite
+    name: American Standard
+    url: https://www.americanstandardair.com/
+  - type: DeveloperPortal
+    name: Trane Developer Portal
+    url: https://developer.devops.chvac.trane.com/
+  - type: Documentation
+    name: Trane Connectivity and Cloud Services
+    url: https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services.html
+  - type: SystemsIntegration
+    url: https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services/systems-integration.html
+  - type: ELibrary
+    name: Trane Technologies eLibrary
+    url: https://elibrary.tranetechnologies.com/
+  - type: SoftwareDownloads
+    url: https://www.trane.com/commercial/north-america/us/en/products-systems/building-management---automation/trane-controls-software-downloads.html
+  - type: GitHubOrganization
+    url: https://github.com/Trane-Technologies
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/trane-technologies/
+  - type: Twitter
+    url: https://twitter.com/TraneTech
+  - type: NewsRoom
+    url: https://www.tranetechnologies.com/en/index/news-and-events.html
+  - type: InvestorRelations
+    url: https://www.tranetechnologies.com/en/index/investor-relations.html
+  - type: Sustainability
+    url: https://www.tranetechnologies.com/en/index/sustainability.html
+  - type: Careers
+    url: https://careers.tranetechnologies.com/
+  - type: Contact
+    url: https://www.tranetechnologies.com/en/index/contact-us.html
+  - type: Plans
+    url: plans/trane-technologies-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/trane-technologies-rate-limits.yml
+  - type: FinOps
+    url: finops/trane-technologies-finops.yml
+  - type: JSONLD
+    url: json-ld/trane-technologies-context.jsonld
+  - type: Vocabulary
+    url: vocabulary/trane-technologies-vocabulary.yml
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
