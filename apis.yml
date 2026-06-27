@@ -75,7 +75,7 @@ apis:
         url: https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services.html
       - type: Portal
         url: https://www.tranetechnologies.com/en/index/news-and-events.html
-      - type: SignIn
+      - type: Login
         url: https://www.tranetechnologies.com/
   - aid: trane-technologies:tracer-sc-plus
     name: Tracer SC+ Building Automation System
@@ -97,7 +97,7 @@ apis:
     properties:
       - type: Documentation
         url: https://www.trane.com/commercial/north-america/us/en/products-systems/smart-building-technology/building-controls-solutions/tracer-sc-plus.html
-      - type: Integration
+      - type: Integrations
         url: https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services/systems-integration.html
       - type: ReleaseNotes
         url: https://www.trane.com/content/dam/Trane/Commercial/global/building-management-&-automation-systems/BAS-SLB131-EN_07142021.pdf
@@ -145,7 +145,7 @@ apis:
         url: https://www.thermoking.com/na/en/connectedsuite-telematics/tracking-telematics.html
       - type: DataIntegration
         url: https://europe.thermoking.com/applications/connected-solutions/tracking/data-integration
-      - type: SignIn
+      - type: Login
         url: https://tracking.thermoking.com/
       - type: UserManual
         url: https://thermokingmichigan.com/wp-content/uploads/2015/06/product-tracking-manual.pdf
