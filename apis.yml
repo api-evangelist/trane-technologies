@@ -217,6 +217,11 @@ apis:
       currently published.
     humanURL: https://brainboxai.com/
     tags:
+      - Artificial Intelligence
+      - Building Optimization
+      - HVAC
+      - Sustainability
+    tags_raw:
       - AI
       - Building Optimization
       - HVAC
