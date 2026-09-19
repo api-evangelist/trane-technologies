@@ -72,6 +72,11 @@ apis:
       - Developer Portal
       - HVAC
       - Building Automation
+      - Partners
+    tags_raw:
+      - Developer Portal
+      - HVAC
+      - Building Automation
       - Partner
     properties:
       - type: Portal
