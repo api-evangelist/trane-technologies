@@ -133,3 +133,44 @@ plans:
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - subscription
+  units:
+  - object
+  plans:
+  - name: Trane Connect (Commercial Buildings)
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - other
+    periods:
+    - year
+  - name: Tracer SC+ / Symbio Controls
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - object
+    periods:
+    - year
+  - name: Thermo King TracKing / ConnectedSuite (TRU Telematics)
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - other
+    periods:
+    - month
+  - name: Trane Residential Connected Thermostats
+    access: free
+    model: free
+    model_how: derived
+    units:
+    - object
+    periods:
+    - one-time
