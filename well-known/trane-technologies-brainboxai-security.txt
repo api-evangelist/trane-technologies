@@ -1,0 +1,3 @@
+Contact: mailto:security@brainboxai.com
+Preferred_languages: en, es, fr
+Expires: 2026-06-06T21:28:00.000Z

@@ -1,0 +1,6 @@
+generated: '2026-10-20'
+method: probed
+generator: harvest-llms.py
+source: https://www.tranetechnologies.com/llms.txt
+bytes: 121970
+note: saved verbatim; the provider's own document

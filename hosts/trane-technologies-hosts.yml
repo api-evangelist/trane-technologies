@@ -1,0 +1,261 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 22
+  own: 5
+  other_domain: 15
+  platform: 2
+  roles:
+  - api
+  - docs
+  - marketing
+  - other
+  - partner
+  - portal
+  - source
+  - website
+hosts:
+- host: api.americanstandardair.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: americanstandardair.com
+  role: api
+  relation: other-domain
+- host: api.brainboxai.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: brainboxai.com
+  role: api
+  relation: other-domain
+- host: api.thermoking.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: thermoking.com
+  role: api
+  relation: other-domain
+- host: api.trane.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: trane.com
+  role: api
+  relation: other-domain
+- host: api.tranetechnologies.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: tranetechnologies.com
+  role: api
+  relation: own
+- host: brainboxai.com
+  found_by:
+  - apis[]
+  - probed
+  - well-known
+  types: []
+  serves:
+  - docs
+  registrable_domain: brainboxai.com
+  role: other
+  relation: other-domain
+- host: careers.tranetechnologies.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  types:
+  - Careers
+  serves: []
+  registrable_domain: tranetechnologies.com
+  role: marketing
+  relation: own
+- host: developer-dev.trackingv2.thermoking.com
+  found_by:
+  - probed
+  - site-links
+  types: []
+  serves: []
+  registrable_domain: thermoking.com
+  role: other
+  relation: other-domain
+- host: developer-qa.trackingv2.thermoking.com
+  found_by:
+  - probed
+  - site-links
+  types: []
+  serves: []
+  registrable_domain: thermoking.com
+  role: other
+  relation: other-domain
+- host: developer-stg.trackingnext.thermoking.com
+  found_by:
+  - probed
+  - site-links
+  types: []
+  serves: []
+  registrable_domain: thermoking.com
+  role: other
+  relation: other-domain
+- host: developer-stg.trackingv2.thermoking.com
+  found_by:
+  - probed
+  - site-links
+  types: []
+  serves: []
+  registrable_domain: thermoking.com
+  role: other
+  relation: other-domain
+- host: developer.devops.chvac.trane.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - well-known
+  - vendor-detect
+  types:
+  - DeveloperPortal
+  serves:
+  - docs
+  - cdn
+  - documentation
+  vendor: cloudflare
+  registrable_domain: trane.com
+  role: portal
+  relation: other-domain
+- host: elibrary.tranetechnologies.com
+  found_by:
+  - pointer
+  - probed
+  - well-known
+  types:
+  - ELibrary
+  serves: []
+  registrable_domain: tranetechnologies.com
+  role: other
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: investors.tranetechnologies.com
+  found_by:
+  - probed
+  - site-links
+  types: []
+  serves: []
+  registrable_domain: tranetechnologies.com
+  role: other
+  relation: own
+- host: partners.thermoking.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  types: []
+  serves: []
+  status: 200
+  registrable_domain: thermoking.com
+  role: partner
+  relation: other-domain
+- host: tracking.thermoking.com
+  found_by:
+  - apis[]
+  - probed
+  - well-known
+  types: []
+  serves:
+  - api
+  registrable_domain: thermoking.com
+  role: other
+  relation: other-domain
+- host: twitter.com
+  found_by:
+  - pointer
+  types:
+  - Twitter
+  serves: []
+  registrable_domain: twitter.com
+  role: other
+  relation: platform
+- host: www.americanstandardair.com
+  found_by:
+  - pointer
+  - probed
+  - well-known
+  types:
+  - BrandSite
+  serves: []
+  registrable_domain: americanstandardair.com
+  role: other
+  relation: other-domain
+- host: www.thermoking.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - well-known
+  types:
+  - BrandSite
+  serves:
+  - docs
+  registrable_domain: thermoking.com
+  role: other
+  relation: other-domain
+- host: www.trane.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - well-known
+  - vendor-detect
+  types:
+  - CommercialSite
+  - ResidentialSite
+  - Documentation
+  - SystemsIntegration
+  - SoftwareDownloads
+  serves:
+  - docs
+  - cdn
+  vendor: cloudfront
+  registrable_domain: trane.com
+  role: docs
+  relation: other-domain
+- host: www.tranetechnologies.com
+  found_by:
+  - pointer
+  - probed
+  - well-known
+  - vendor-detect
+  types:
+  - Newsroom
+  - Leadership
+  - Website
+  - Sustainability
+  - Contact
+  - Blog
+  - PrivacyPolicy
+  - TermsOfService
+  serves:
+  - cdn
+  vendor: fastly
+  registrable_domain: tranetechnologies.com
+  role: website
+  relation: own

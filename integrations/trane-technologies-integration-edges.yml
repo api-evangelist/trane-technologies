@@ -1,0 +1,40 @@
+generated: '2026-10-20'
+method: searched
+source:
+- https://www.seam.co/manufacturers/trane
+- https://zapier.com/apps/trane-technologies/integrations
+- https://n8n.io/integrations/trane-technologies/
+- https://composio.dev/toolkits/trane-technologies
+- https://monid.ai/tools/trane-technologies
+checked:
+- https://zapier.com/apps/trane/integrations
+- https://www.seam.co/manufacturers/trane
+- https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services/systems-integration.html
+- https://composio.dev/toolkits/trane-technologies
+- https://monid.ai/tools/trane-technologies
+- https://n8n.io/integrations/trane-technologies/
+- https://zapier.com/apps/trane-technologies/integrations
+summary: null
+marketplace_apps: []
+edges:
+- partner_name: Samsara
+  partner: null
+  type: claimed
+  direction: third-party
+  product: Thermo King TracKing
+  evidence: https://kb.samsara.com/hc/en-us/articles/9680069447949-Integrate-with-Thermo-King-TracKing
+  note: Partner help-center article (HTTP 403 to our crawler, Zendesk edge); recorded in apis.yml from a prior pass.
+- partner_name: Motive
+  partner: null
+  type: claimed
+  direction: third-party
+  product: Thermo King TracKing
+  evidence: https://helpcenter.gomotive.com/hc/en-us/articles/6189331073949-What-is-the-AG-Max-Thermo-King-Integration
+  note: Partner help-center article (HTTP 403 to our crawler).
+- partner_name: Seam
+  partner: null
+  type: claimed
+  direction: third-party
+  product: Trane residential thermostats
+  evidence: https://www.seam.co/manufacturers/trane
+templates: []

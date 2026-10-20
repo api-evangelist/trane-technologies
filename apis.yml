@@ -1,5 +1,7 @@
 aid: trane-technologies
+
 name: Trane Technologies
+
 description: >-
   Trane Technologies plc (NYSE: TT) is an Ireland-domiciled global climate
   innovator that designs, manufactures, sells, and services heating,
@@ -13,7 +15,9 @@ description: >-
   Trane Connect (cloud building portal), Tracer SC+ / Symbio controllers
   for commercial building automation, and the Thermo King TracKing /
   ConnectedSuite telematics platform for transport refrigeration.
+
 type: Index
+
 deliveryModel:
   model: saas
   open_source: false
@@ -25,6 +29,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: paid
   onboarding: unknown
@@ -37,9 +42,13 @@ accessModel:
   - plans
   generated: '2026-07-22'
   method: derived
+
 position: Producing
+
 access: Partner
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/trane-technologies.png
+
 tags:
   - HVAC
   - Cold Chain
@@ -51,11 +60,93 @@ tags:
   - BACnet
   - Smart Buildings
   - Fortune 500
+
 created: '2026-05-23'
+
 modified: '2026-05-23'
+
 url: >-
   https://raw.githubusercontent.com/api-evangelist/trane-technologies/refs/heads/main/apis.yml
+
 specificationVersion: '0.23'
+
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
+
+common:
+  - type: LLMsTxt
+    url: llms/trane-technologies-llms.txt
+  - type: SecurityTxt
+    url: well-known/trane-technologies-brainboxai-security.txt
+  - type: WellKnown
+    url: well-known/trane-technologies-well-known.yml
+  - type: Hosts
+    url: hosts/trane-technologies-hosts.yml
+  - type: IntegrationEdges
+    url: integrations/trane-technologies-integration-edges.yml
+  - type: Vendors
+    url: vendors/trane-technologies-vendors.yml
+  - type: Newsroom
+    url: https://www.tranetechnologies.com/en/index/news/events.html
+  - type: Leadership
+    url: https://www.tranetechnologies.com/en/index/company/leadership/allen-ge.html
+  - type: DomainSecurity
+    url: security/trane-technologies-domain-security.yml
+  - type: Website
+    url: https://www.tranetechnologies.com/
+  - type: CommercialSite
+    name: Trane Commercial
+    url: https://www.trane.com/commercial/
+  - type: ResidentialSite
+    name: Trane Residential
+    url: https://www.trane.com/residential/
+  - type: BrandSite
+    name: Thermo King
+    url: https://www.thermoking.com/na/en.html
+  - type: BrandSite
+    name: American Standard
+    url: https://www.americanstandardair.com/
+  - type: DeveloperPortal
+    name: Trane Developer Portal
+    url: https://developer.devops.chvac.trane.com/
+  - type: Documentation
+    name: Trane Connectivity and Cloud Services
+    url: https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services.html
+  - type: SystemsIntegration
+    url: https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services/systems-integration.html
+  - type: ELibrary
+    name: Trane Technologies eLibrary
+    url: https://elibrary.tranetechnologies.com/
+  - type: SoftwareDownloads
+    url: https://www.trane.com/commercial/north-america/us/en/products-systems/building-management---automation/trane-controls-software-downloads.html
+  - type: GitHubOrganization
+    url: https://github.com/Trane-Technologies
+  - type: Twitter
+    url: https://twitter.com/TraneTech
+  - type: Sustainability
+    url: https://www.tranetechnologies.com/en/index/sustainability.html
+  - type: Careers
+    url: https://careers.tranetechnologies.com/
+  - type: Contact
+    url: https://www.tranetechnologies.com/en/index/contact-us.html
+  - type: Plans
+    url: plans/trane-technologies-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/trane-technologies-rate-limits.yml
+  - type: FinOps
+    url: finops/trane-technologies-finops.yml
+  - type: JSONLD
+    url: json-ld/trane-technologies-context.jsonld
+  - type: Vocabulary
+    url: vocabulary/trane-technologies-vocabulary.yml
+  - url: https://www.tranetechnologies.com/en/index/blog.html
+    type: Blog
+  - type: PrivacyPolicy
+    url: https://www.tranetechnologies.com/en/index/privacy-policy.html
+  - type: TermsOfService
+    url: https://www.tranetechnologies.com/en/index/terms-of-use.html
+
 apis:
   - aid: trane-technologies:trane-developer-portal
     name: Trane Developer Portal
@@ -245,64 +336,20 @@ apis:
     properties:
       - type: Website
         url: https://brainboxai.com/
-common:
-  - type: DomainSecurity
-    url: security/trane-technologies-domain-security.yml
-  - type: Website
-    url: https://www.tranetechnologies.com/
-  - type: CommercialSite
-    name: Trane Commercial
-    url: https://www.trane.com/commercial/
-  - type: ResidentialSite
-    name: Trane Residential
-    url: https://www.trane.com/residential/
-  - type: BrandSite
-    name: Thermo King
-    url: https://www.thermoking.com/na/en.html
-  - type: BrandSite
-    name: American Standard
-    url: https://www.americanstandardair.com/
-  - type: DeveloperPortal
-    name: Trane Developer Portal
-    url: https://developer.devops.chvac.trane.com/
-  - type: Documentation
-    name: Trane Connectivity and Cloud Services
-    url: https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services.html
-  - type: SystemsIntegration
-    url: https://www.trane.com/commercial/north-america/us/en/services/operate-maintain-repair/connectivity-and-cloud-services/systems-integration.html
-  - type: ELibrary
-    name: Trane Technologies eLibrary
-    url: https://elibrary.tranetechnologies.com/
-  - type: SoftwareDownloads
-    url: https://www.trane.com/commercial/north-america/us/en/products-systems/building-management---automation/trane-controls-software-downloads.html
-  - type: GitHubOrganization
-    url: https://github.com/Trane-Technologies
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/trane-technologies/
-  - type: Twitter
-    url: https://twitter.com/TraneTech
-  - type: NewsRoom
-    url: https://www.tranetechnologies.com/en/index/news-and-events.html
-  - type: InvestorRelations
-    url: https://www.tranetechnologies.com/en/index/investor-relations.html
-  - type: Sustainability
-    url: https://www.tranetechnologies.com/en/index/sustainability.html
-  - type: Careers
-    url: https://careers.tranetechnologies.com/
-  - type: Contact
-    url: https://www.tranetechnologies.com/en/index/contact-us.html
-  - type: Plans
-    url: plans/trane-technologies-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/trane-technologies-rate-limits.yml
-  - type: FinOps
-    url: finops/trane-technologies-finops.yml
-  - type: JSONLD
-    url: json-ld/trane-technologies-context.jsonld
-  - type: Vocabulary
-    url: vocabulary/trane-technologies-vocabulary.yml
-  - url: https://www.tranetechnologies.com/en/index/blog.html
-    type: Blog
-maintainers:
-  - FN: Kin Lane
-    email: info@apievangelist.com
+x-enrichment:
+  date: '2026-10-20'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v5
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: The Trane CHVAC developer portal at developer.devops.chvac.trane.com is a Stoplight workspace whose anonymous project list is empty and whose only route is a Sign in page, so no API reference or contract is public; api.thermoking.com answers 403 everywhere.
+  evidence:
+    - url: https://developer.devops.chvac.trane.com/
+      status: 200
+    - url: https://developer.devops.chvac.trane.com/auth
+      status: 200
+    - url: https://api.thermoking.com/openapi.json
+      status: 403
+  checked: '2026-10-20'
